@@ -1,3 +1,9 @@
+import { Button } from "@mantine/core";
+
 export function Mantine() {
-  return <div>Mantine</div>;
+  return (
+    <div>
+      <Button>Button</Button>
+    </div>
+  );
 }

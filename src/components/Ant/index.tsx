@@ -1,3 +1,9 @@
+import { Button } from "antd";
+
 export function Ant() {
-  return <div>Ant</div>;
+  return (
+    <div>
+      <Button>Button</Button>
+    </div>
+  );
 }

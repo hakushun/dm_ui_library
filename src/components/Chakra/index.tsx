@@ -1,3 +1,9 @@
+import { Button } from "@chakra-ui/react";
+
 export function Chakra() {
-  return <div>Chakra</div>;
+  return (
+    <div>
+      <Button>Button</Button>
+    </div>
+  );
 }
