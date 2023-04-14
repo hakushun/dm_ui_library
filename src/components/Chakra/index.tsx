@@ -1,11 +1,16 @@
 import {
   Badge,
+  Box,
+  Button,
   Card,
   CardBody,
   Container,
+  FormControl,
+  FormLabel,
   HStack,
   Heading,
   Image,
+  Input,
   Stack,
   StackDivider,
   Table,
@@ -22,7 +27,7 @@ import {
 
 export function Chakra() {
   return (
-    <VStack divider={<StackDivider borderColor="gray.200" />} spacing={4} bgColor="gray.50">
+    <VStack divider={<StackDivider borderColor="gray.200" />} spacing={4} bgColor="gray.50" py={4}>
       <Container maxW="none">
         <Heading as="h1">Card</Heading>
         <HStack spacing={4}>
@@ -161,6 +166,24 @@ export function Chakra() {
             </Tfoot>
           </Table>
         </TableContainer>
+      </Container>
+      <Container maxW="none">
+        <Heading as="h1">Form</Heading>
+        <Container as="form">
+          <FormControl>
+            <Box>
+              <FormLabel>メールアドレス</FormLabel>
+              <Input type="email" />
+            </Box>
+            <Box mt={4}>
+              <FormLabel>パスワード</FormLabel>
+              <Input type="password" />
+            </Box>
+            <Button mt={4} colorScheme="teal" type="button">
+              Submit
+            </Button>
+          </FormControl>
+        </Container>
       </Container>
     </VStack>
   );
