@@ -106,7 +106,7 @@ export function Chakra() {
               <Tr>
                 <Td isNumeric>2</Td>
                 <Td>
-                  <Badge colorScheme="green">公開中</Badge>
+                  <Badge colorScheme="red">非公開</Badge>
                 </Td>
                 <Td>ソリューション2</Td>
                 <Td>RSD_00002</Td>
@@ -126,7 +126,7 @@ export function Chakra() {
               <Tr>
                 <Td isNumeric>4</Td>
                 <Td>
-                  <Badge colorScheme="green">公開中</Badge>
+                  <Badge colorScheme="red">非公開</Badge>
                 </Td>
                 <Td>ソリューション4</Td>
                 <Td>RSD_00004</Td>
@@ -146,7 +146,7 @@ export function Chakra() {
               <Tr>
                 <Td isNumeric>6</Td>
                 <Td>
-                  <Badge colorScheme="green">公開中</Badge>
+                  <Badge colorScheme="red">非公開</Badge>
                 </Td>
                 <Td>ソリューション6</Td>
                 <Td>RSD_00006</Td>
