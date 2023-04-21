@@ -1,19 +1,22 @@
 import {
   Badge,
+  Button,
   Card,
   Container,
   Flex,
   Group,
   Image,
+  PasswordInput,
   Stack,
   Table,
   Text,
+  TextInput,
   Title,
 } from "@mantine/core";
 
 export function Mantine() {
   return (
-    <Stack>
+    <Stack py={10}>
       <Container w="100%">
         <Title order={1}>Card</Title>
         <Flex gap="md">
@@ -162,6 +165,16 @@ export function Mantine() {
             </tr>
           </tfoot>
         </Table>
+      </Container>
+      <Container w="100%">
+        <Title order={1}>Form</Title>
+        <Stack maw={380} mx="auto">
+          <TextInput label="メールアドレス" type="email" />
+          <PasswordInput label="パスワード" defaultValue="secret" />
+          <Group>
+            <Button>Submit</Button>
+          </Group>
+        </Stack>
       </Container>
     </Stack>
   );
