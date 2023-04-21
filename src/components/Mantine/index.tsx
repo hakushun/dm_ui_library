@@ -1,9 +1,20 @@
-import { Card, Container, Flex, Group, Image, Stack, Text, Title } from "@mantine/core";
+import {
+  Badge,
+  Card,
+  Container,
+  Flex,
+  Group,
+  Image,
+  Stack,
+  Table,
+  Text,
+  Title,
+} from "@mantine/core";
 
 export function Mantine() {
   return (
     <Stack>
-      <Container>
+      <Container w="100%">
         <Title order={1}>Card</Title>
         <Flex gap="md">
           <Card shadow="sm" padding="lg" radius="md" withBorder>
@@ -64,6 +75,93 @@ export function Mantine() {
             </Container>
           </Card>
         </Flex>
+      </Container>
+      <Container w="100%">
+        <Title order={1}>Table</Title>
+        <Table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>公開設定</th>
+              <th>ソリューション名</th>
+              <th>型番</th>
+              <th>作成日</th>
+              <th>更新日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <Badge>公開中</Badge>
+              </td>
+              <td>ソリューション名1</td>
+              <td>RSD_00001</td>
+              <td>2023/01/01 00:00:00</td>
+              <td>2023/01/01 00:00:00</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <Badge color="red">非公開</Badge>
+              </td>
+              <td>ソリューション名2</td>
+              <td>RSD_00002</td>
+              <td>2023/01/01 00:00:00</td>
+              <td>2023/01/01 00:00:00</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <Badge>公開中</Badge>
+              </td>
+              <td>ソリューション名3</td>
+              <td>RSD_00003</td>
+              <td>2023/01/01 00:00:00</td>
+              <td>2023/01/01 00:00:00</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <Badge color="red">非公開</Badge>
+              </td>
+              <td>ソリューション名4</td>
+              <td>RSD_00004</td>
+              <td>2023/01/01 00:00:00</td>
+              <td>2023/01/01 00:00:00</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <Badge>公開中</Badge>
+              </td>
+              <td>ソリューション名5</td>
+              <td>RSD_00005</td>
+              <td>2023/01/01 00:00:00</td>
+              <td>2023/01/01 00:00:00</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>
+                <Badge color="red">非公開</Badge>
+              </td>
+              <td>ソリューション名6</td>
+              <td>RSD_00006</td>
+              <td>2023/01/01 00:00:00</td>
+              <td>2023/01/01 00:00:00</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>No.</th>
+              <th>公開設定</th>
+              <th>ソリューション名</th>
+              <th>型番</th>
+              <th>作成日</th>
+              <th>更新日</th>
+            </tr>
+          </tfoot>
+        </Table>
       </Container>
     </Stack>
   );
