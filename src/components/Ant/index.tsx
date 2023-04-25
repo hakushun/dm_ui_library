@@ -10,6 +10,9 @@ import {
   theme,
   Table,
   Tag,
+  Form,
+  Input,
+  Button,
 } from "antd";
 import { ColumnsType } from "antd/es/table";
 
@@ -101,7 +104,7 @@ const dataSource = [
     no: 3,
     publishSetting: PUBLISH_SETTING.public,
     solutionName: "ソリューション3",
-    modelNo: "RSD_00002",
+    modelNo: "RSD_00003",
     createdAt: "2023/01/01 00:00:00",
     updatedAt: "2023/01/01 00:00:00",
   },
@@ -109,7 +112,7 @@ const dataSource = [
     no: 4,
     publishSetting: PUBLISH_SETTING.private,
     solutionName: "ソリューション4",
-    modelNo: "RSD_00002",
+    modelNo: "RSD_00004",
     createdAt: "2023/01/01 00:00:00",
     updatedAt: "2023/01/01 00:00:00",
   },
@@ -117,7 +120,7 @@ const dataSource = [
     no: 5,
     publishSetting: PUBLISH_SETTING.public,
     solutionName: "ソリューション5",
-    modelNo: "RSD_00002",
+    modelNo: "RSD_00005",
     createdAt: "2023/01/01 00:00:00",
     updatedAt: "2023/01/01 00:00:00",
   },
@@ -125,7 +128,7 @@ const dataSource = [
     no: 6,
     publishSetting: PUBLISH_SETTING.private,
     solutionName: "ソリューション6",
-    modelNo: "RSD_00002",
+    modelNo: "RSD_00006",
     createdAt: "2023/01/01 00:00:00",
     updatedAt: "2023/01/01 00:00:00",
   },
@@ -140,6 +143,7 @@ export function Ant() {
         style={{
           maxWidth: "none",
           padding: "16px 24px",
+          backgroundColor: "#fafafa",
         }}
       >
         <Title>Card</Title>
@@ -184,14 +188,36 @@ export function Ant() {
             </Card>
           </Col>
         </Row>
-      </Content>
-      {/* /Card Content */}
-      <Divider style={{ margin: token.marginXS }} />
-      <Content style={{ maxWidth: "none", padding: "16px 24px" }}>
+        {/* /Card */}
+        <Divider style={{ margin: token.marginMD }} />
         <Title>Table</Title>
-        <Table dataSource={dataSource} columns={columns} />;
+        <Row justify="center">
+          <Col span={20}>
+            <Table dataSource={dataSource} columns={columns} />
+          </Col>
+        </Row>
+        {/* /Table */}
+        <Divider style={{ margin: token.marginMD }} />
+        <Title>Form</Title>
+        <Row justify="center">
+          <Col span={8}>
+            <Form name="basic" layout="vertical">
+              <Form.Item label="メールアドレス" name="mail">
+                <Input type="email" />
+              </Form.Item>
+              <Form.Item label="パスワード" name="password">
+                <Input type="password" />
+              </Form.Item>
+              <Form.Item name="submit">
+                <Button type="primary" htmlType="button">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+          </Col>
+        </Row>
+        {/* /Form */}
       </Content>
-      {/* /Table Content */}
     </Layout>
   );
 }
